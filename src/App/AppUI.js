@@ -7,6 +7,8 @@ import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
 
 function AppUI({
+    error,
+    loading,
     completedTodos,
     totalTodos,
     searchValue,
@@ -16,6 +18,11 @@ function AppUI({
     deleteTodo
 }) {
 
+// console.log("antes")
+//   React.useEffect (() =>{
+//       console.log("Use effect")
+//   })
+// console.log("despues")
     
     return (
         <React.Fragment>
@@ -29,6 +36,10 @@ function AppUI({
       />
 
       <TodoList>
+        {error && <p>Error!</p>}
+        {loading && <p>Cargando!</p>}
+        {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>}
+
         {searchedTodos.map(todo => (
           <TodoItem
             key={todo.text}
