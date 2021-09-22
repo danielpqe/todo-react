@@ -44,22 +44,24 @@ function TodoProvider(props) {
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
+  }
     return (
-<TodoContext.Provider value = {{
-    error,
-    loading,
-    completedTodos,
-    totalTodos,
-    searchValue,
-    setSearchValue,
-    searchedTodos,
-    completeTodo,
-    deleteTodo
-}}>
-{props.children}
-</TodoContext.Provider>
 
-    )
+    <TodoContext.Provider value = {{
+        error,
+        loading,
+        completedTodos,
+        totalTodos,
+        searchValue,
+        setSearchValue,
+        searchedTodos,
+        completeTodo,
+        deleteTodo
+    }}>
+    {props.children}
+    </TodoContext.Provider>
+
+    );
 }
 
-export{TodoContext, TodoProvider}
+export { TodoContext, TodoProvider }
