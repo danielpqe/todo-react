@@ -1,10 +1,8 @@
 import React from "react";
 import "./TodoSearch.css";
-import { TodoContext } from '../TodoContext'
 
-function TodoSearch() {
+function TodoSearch({searchValue, setSearchValue, loading}) {
   
-const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
   const onSearchValueChanged = (event) => {
    
@@ -12,12 +10,15 @@ const { searchValue, setSearchValue } = React.useContext(TodoContext);
   };
   return (
     <input
-      className="TodoSearch"
+      className = 'TodoSearch'
       placeholder="Search something to do"
       onChange={onSearchValueChanged}
       value={searchValue}
+      disabled={!!loading}
     />
   );
 }
 
 export { TodoSearch };
+
+

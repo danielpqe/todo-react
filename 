@@ -1,0 +1,10 @@
+[33m4d6a625[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m deploy
+[33mf9800f2[m finish v1
+[33m9894b77[m Todo Context
+[33md2cdf52[m Added React Context
+[33m188579f[m creating custom hook
+[33mb7d4655[m saving todos in local storage
+[33m36a8247[m mark as completed and drop items
+[33m0c82885[m adding setState hook
+[33m28d3670[m initial commit
+[33m8de7729[m Initialize project using Create React App

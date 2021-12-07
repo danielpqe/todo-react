@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function useLocalStorage(itemName, initialValue) {
   const [loading, setLoading] = React.useState(true);
@@ -23,8 +23,8 @@ function useLocalStorage(itemName, initialValue) {
       } catch (e) {
         setError(e);
       }
-    }, 2000);
-  });
+    }, 3000);
+  }, []);
 
   const saveItem = (newItem) => {
     try {
@@ -36,12 +36,12 @@ function useLocalStorage(itemName, initialValue) {
     }
   };
 
-return {
-  item,
-  saveItem,
-  loading,
-  error
-}
+  return {
+    item,
+    saveItem,
+    loading,
+    error,
+  };
 }
 
-  export {useLocalStorage}
+export { useLocalStorage };
